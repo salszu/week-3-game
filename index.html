@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1 class="text-center"><strong>Hangman</strong></h1>
+			<h1 class="text-center"><strong>Hangmang</strong></h1>
 			<h3 class="text-center">Alphabet Assassin</h3>
 			<hr>
 		</div>
@@ -27,21 +27,79 @@
 				<div class="panel panel-default">
 				  <div class="panel-heading">
 				  		<hr>
-				    	<h3 class="panel-title text-center strong">Start the game!</h3>
+				    	<h2 class="panel-title text-center"><strong>Start the game!</strong></h2>
 				    	<hr>
 				    	<div class="text-center">
-			    			<button class="btn btn-success btn-md startButton"><span class="glyphicon glyphicon-leaf"></span> Start </button>		  	
-		    				<button class="btn btn-danger btn-md resetButton"><span class="glyphicon glyphicon-fire"></span> Reset </button>	
+			    			<button class="btn btn-success btn-lg startButton"><span class="glyphicon glyphicon-leaf"></span> Start </button>		  	
+		    				<button class="btn btn-danger btn-xs resetButton"><span class="glyphicon glyphicon-fire"></span> Reset </button>	
 						</div>
 				  </div>
 			</div>
 		</div>
 
-		<div class="row"
+		<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title text-center"><strong>GOOD LUCK!</strong></h3>
+						<hr>
+						<h3 class="panel-title text-center">#</h3>
+						<p class="text-center"> You have <span id="guessesLeft">5</span> guesses left.</p>
+						<div id="letters">
+							<a id="a">A</a>
+							<a id="b">B</a>
+							<a id="c">C</a>
+							<a id="d">D</a>
+							<a id="e">E</a>
+							<a id="f">F</a>
+							<a id="g">G</a>
+							<a id="h">H</a>
+							<a id="i">I</a>
+							<a id="j">J</a>
+							<a id="k">K</a>
+							<a id="l">L</a>
+							<a id="m">M</a>
+							<a id="n">N</a>
+							<a id="o">O</a>
+							<a id="p">P</a>
+							<a id="q">Q</a>
+							<a id="r">R</a>
+							<a id="s">S</a>
+							<a id="t">T</a>
+							<a id="u">U</a>
+							<a id="v">V</a>
+							<a id="w">W</a>
+							<a id="x">X</a>
+							<a id="y">Y</a>
+							<a id="z">Z</a>
+
+						</div>
+							
+							<div></div>
+								<!-- JAVASCRIPT DIV FOR CORRECT WORDS HERE -->
+					</div>
+				</div>					
+			</div>
+			<div class="col-md-offset-1 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title text-center"><strong>Letters Used</strong></h3>
+						<hr>
+						<p class="text-center"><span id="lettersUsed"> # </span></p>	
+							
+						<div></div>
+								<!-- SLIP IN JAVASCRIPT DIV HERE FOR USED LETTER KEYPRESS -->
+					</div>
+				</div>					
+			</div>
+		</div>
+
+		
+
 	
 
 
-	</div>
+		</div>
 	</div>		
 
 
