@@ -4,45 +4,68 @@ $(document).ready(function(){
 	console.log("READY!");
 
 	// variables
-	var letters = 0;
 	var wins = 0;
 	var losses = 0;	
-	var word = ['b', 'a', 'r', 'l', 'e', 'y'];
-	var possibleChoices = ['a', 'b', 'c', 'd', 'e',
+	var roboChoices = ['a', 'b', 'c', 'd', 'e',
 	'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-	var redX = 0;
+	var redX = $('#redX2')
+	var guessesLeft = 6;
 	//var usedLetter = [possibleChoices - ]
 	//resetting wins/losses/guesses
 	document.getElementById('wins').innerHTML = '0';
 	document.getElementById('losses').innerHTML=  '0';
-	document.getElementById('guessesLeft').innerHTML= "6";
+	document.getElementById('guessesLeft').innerHTML= '6';
+	
+	document.onkeyup = function(){
 
-		//randomizer for choosing a word to start with 
-    	var choice = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];	
+			document.getElementById('guessesLeft').innerHTML= '6';
+			alert("GOOD LUCK!");
+			var roboGuess = roboChoices[Math.floor(Math.random() * roboChoices.length)];
+			console.log(roboGuess);
 
-		//onkeyup 
-		document.getElementById("letters").onkeyup = function(){
-
-			var keyPress = document.getElementById("letters");
-
-		//onkeyUP#2?
-			document.onkeyup = function(event) {
-				var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			//if-elseIf-else grouping
+			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+				if((userGuess == roboGuess)) + (( guessesLeft > 0 )){
+					alert("YOU HAVE WON");
+				}else if (userGuess != roboGuess) + (guessesLeft > 0){
+					guessesLeft--;
+				}
+				
 			}
 
-		};	
+			$('#resetButton').on("click", function(){
+				document.getElementById('guessesLeft').innerHTML= 'no';
 
+
+		});
+
+
+
+	};	
+
+		//randomizer for choosing a word to start with 
+    	//var choice = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];	
+
+		//onkeyup 
+		//document.getElementById("letters").onkeyup = function(){
+
+			//var keyPress = document.getElementById("letters");
+
+		//onkeyUP#2?
+			//document.onkeyup = function(event) {
+				//var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			//}
 
 		// creating underscores for the chosen words for loop
-		for( var i = 0; i <= words.length; i++) {
+		//for( var i = 0; i <= words.length; i++) {
 			
 
 
 			//document.getElementById('uScores').innerHTML= ;
-		}
+		//}
 		
 
-		//use css to create the underscores you fucking jackass  border-bottom: 1px solid black;
+		//use css to create the underscores?   border-bottom: 1px solid black;
 
 		
 
