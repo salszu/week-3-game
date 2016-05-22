@@ -19,25 +19,23 @@ $(document).ready(function(){
 	alert("GOOD LUCK!");
 	var roboGuess = roboChoices[Math.floor(Math.random() * roboChoices.length)];
 	console.log(roboGuess);
-	var 
-	document.onkeyup = function(){
-
-			
+	
+	document.onkeyup = function startAgain(){
 
 			//if-elseIf-else grouping
 			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 				if((userGuess == roboGuess) && ( guessesLeft > 0 )){
 					alert("YOU HAVE WON");
+					document.getElementById('wins').innerHTML= (wins++);
 				}else if ((userGuess != roboGuess) && (guessesLeft > 0)){
 					guessesLeft--;
+					document.getElementById('guessesLeft').innerHTML= (guessesLeft);
 				} else {
-					alert("The computers have won. I, for one, welcome our new robotic overlords.")
+					alert("The computers have won. I, for one, welcome our new robotic overlords.");
+					document.getElementById('losses').innerHTML= (losses++);
 				}
-				
-			
-
-
-			
+			//infinite loops, what.	
+			startAgain();
 
 
 		};
