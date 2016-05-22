@@ -16,32 +16,42 @@ $(document).ready(function(){
 	document.getElementById('losses').innerHTML=  '0';
 	document.getElementById('guessesLeft').innerHTML= '6';
 	
+	alert("GOOD LUCK!");
+	var roboGuess = roboChoices[Math.floor(Math.random() * roboChoices.length)];
+	console.log(roboGuess);
+	var 
 	document.onkeyup = function(){
 
-			document.getElementById('guessesLeft').innerHTML= '6';
-			alert("GOOD LUCK!");
-			var roboGuess = roboChoices[Math.floor(Math.random() * roboChoices.length)];
-			console.log(roboGuess);
+			
 
 			//if-elseIf-else grouping
 			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-				if((userGuess == roboGuess)) + (( guessesLeft > 0 )){
+				if((userGuess == roboGuess) && ( guessesLeft > 0 )){
 					alert("YOU HAVE WON");
-				}else if (userGuess != roboGuess) + (guessesLeft > 0){
+				}else if ((userGuess != roboGuess) && (guessesLeft > 0)){
 					guessesLeft--;
+				} else {
+					alert("The computers have won. I, for one, welcome our new robotic overlords.")
 				}
 				
-			}
-
-			$('#resetButton').on("click", function(){
-				document.getElementById('guessesLeft').innerHTML= 'no';
+			
 
 
-		});
+			
+
+
+		};
 
 
 
-	};	
+	});	
+		//var html = 
+
+			//$('#resetButton').on("click", function(){
+				//document.getElementById('guessesLeft').innerHTML= 'no';
+		
+
+
 
 		//randomizer for choosing a word to start with 
     	//var choice = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];	
